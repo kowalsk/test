@@ -1,3 +1,43 @@
-to jest test
+<!DOCTYPE html>
+<html>
 
-https://www.youtube.com/watch?v=4URm-dRVvzE
+<head>
+	<meta charset="utf-8" />
+	<title>ZIM - Code Creativity</title>
+
+	<!-- zimjs.com - JavaScript Canvas Framework -->
+	<script src="https://zimjs.org/cdn/nft/00/zim.js"></script>
+
+	<script>
+		// See Docs under Frame for FIT, FILL, FULL, and TAG scaling modes
+		const frame = new Frame(FIT, 1024, 768, light, dark);
+		frame.on("ready", () => {
+			const stage = frame.stage;
+			let stageW = frame.width;
+			let stageH = frame.height;
+			// put your code here
+			new Circle(100, blue)
+				.center()
+				.sca(0.5)
+				.drag();
+			const holder = new Container().loc(200, 100);
+			new Rectangle(100, 100, red).addTo(holder);
+			new Rectangle(100, 100, blue).loc(200, 200, holder);
+			holder.rot(60);
+			holder.drag({
+				all: true
+			});
+			new Triangle(100, 100, 100, pink, purple, 5)
+				.center()
+				.rot(90);
+			stage.update(); // needed to view changes
+		});
+	</script>
+	<meta name="viewport" content="width=device-width, user-scalable=no" />
+</head>
+
+<body>
+	Based on https://zimjs.com/skool/lesson01.html
+</body>
+
+</html>
